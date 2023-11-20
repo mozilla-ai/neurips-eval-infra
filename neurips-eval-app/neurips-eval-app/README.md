@@ -6,7 +6,7 @@ Steps:
 
 1. Make sure the Dockerfile for your container exposes port `8080`. You can run it from within the pod, `CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]` should the be last line; alternatively to start manually: `uvicorn main:app --host 0.0.0.0 --port 8080` 
 
-2. Build your model container on a CoreWeave Virtual Server. 
+2. Build your model container on a CoreWeave Virtual Server and push to the Docker Registry. 
 
 To spin up a virtual server, 
 
@@ -55,7 +55,6 @@ spec:
     requests:
       storage: 10Gi
 ```
-
 
 
 

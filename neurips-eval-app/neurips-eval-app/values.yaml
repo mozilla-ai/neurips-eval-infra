@@ -1,0 +1,34 @@
+
+cw_env: prod
+cw_geo: lga1
+
+modelServer:
+  name: "neurips-model-image"
+  # Model Training
+  # 4090
+  # image: "docker-registry
+  # tag: "2"
+  # A100
+  # image: "docker-registry
+  # tag: "5"
+  # Model Eval
+  # 4090
+  image: "docker-registry
+  tag: "3"
+  # A100
+  # image: "docker-registry
+  # tag: "1"
+  gpus: 1
+  memory: "64Gi"
+  cpus: 8
+
+helmServer:
+  name: "neurips-helm-image"
+  # Change to include eval repo prefix when image is built
+  image: "docker-registryhelm-server" 
+  tag: "1"
+  memory: "64Gi"
+  cpus: 8
+ 
+imagePullPolicy: "IfNotPresent"
+
