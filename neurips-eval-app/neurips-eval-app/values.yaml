@@ -6,17 +6,14 @@ modelServer:
   name: "neurips-model-image"
   # Model Training
   # 4090
-  # image: "docker-registry
+  # image: "{docker_registry}/{image_name}"
   # tag: "2"
-  # A100
-  # image: "docker-registry
-  # tag: "5"
   # Model Eval
   # 4090
-  image: "docker-registry
+  image: "4090_eval"
   tag: "3"
   # A100
-  # image: "docker-registry
+  # image: "{docker_registry}/{image_name}"
   # tag: "1"
   gpus: 1
   memory: "64Gi"
@@ -25,8 +22,8 @@ modelServer:
 helmServer:
   name: "neurips-helm-image"
   # Change to include eval repo prefix when image is built
-  image: "docker-registryhelm-server" 
-  tag: "1"
+  image: "{docker_registry}/helm-server" 
+  tag: "2"
   memory: "64Gi"
   cpus: 8
  
