@@ -1,0 +1,21 @@
+
+cw_env: env
+cw_geo: geo
+
+modelServer:
+  name: "neurips-model-image"
+  image: "{docker_registry}/model-server"
+  tag: "3"
+  gpus: 1
+  memory: "64Gi"
+  cpus: 8
+
+helmServer:
+  name: "neurips-helm-image"
+  image: "{docker_registry}/helm-server" 
+  tag: "2"
+  memory: "64Gi"
+  cpus: 8
+ 
+imagePullPolicy: "IfNotPresent"
+
