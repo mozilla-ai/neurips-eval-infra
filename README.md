@@ -1,6 +1,12 @@
 # Neurips Model Server and HELM Eval Server
 
-In order to evaluate NeurIPS 2023 submissions, we're running a Kubernetes deployment with two pods: 
+> [!INFO]
+>
+> This is a sample reference implementation of the architecture we used to finetune-evaluate NeurIPS Large Language Model Efficiency Challenge submissions. 
+> It doesn't include Dockerfile image paths and is missing some K8s deployment-level values. 
+> If you'd like to deploy in your own environment, you'll need to add those values. 
+
+In order to evaluate [NeurIPS 2023 submissions](https://llm-efficiency-challenge.github.io/challenge), we're running a Kubernetes deployment with two pods: 
 + a model pod (`Dockerfile.model`) and 
 + a HELM server pod (`Dockerfile.helm`). 
 
