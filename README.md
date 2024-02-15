@@ -1,6 +1,6 @@
 # Neurips Model Server and HELM Eval Server
 
-> [!INFO]
+> [!NOTE]
 >
 > This is a sample reference implementation of the architecture we used to finetune-evaluate NeurIPS Large Language Model Efficiency Challenge submissions. 
 > It doesn't include Dockerfile image paths and is missing some K8s deployment-level values. 
