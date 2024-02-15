@@ -52,7 +52,7 @@ Save all checkpoints and artifacts to shared storage.
 
 3. The two containers should see each other through the internal IP network on the Pod via port `8080`. 
 
-4. To run the eval server, run the sample script from the eval server. Specify `nohup` or use `screen` or `tmux` if you'd like to run without interruptions. 
+4. To run HELM evaluation, run the sample script from the eval server. Specify `nohup` or use `screen` or `tmux` to run the long-running job without network interruptions. 
 
 `helm-run --conf-paths run_specs_full_coarse_600_budget.conf --suite v1 --max-eval-instances 1`
 
