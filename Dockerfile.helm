@@ -5,7 +5,7 @@ WORKDIR /src
 ENV SHELL "/bin/bash"
 ARG PIP="pip install --no-cache-dir --upgrade"
 
-COPY ../../requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 COPY run_specs_full_coarse_600_budget.conf .
 
 RUN  apt-get update \
