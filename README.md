@@ -12,6 +12,8 @@ In order to evaluate [NeurIPS 2023 submissions](https://llm-efficiency-challenge
 
 For evaluation, we run HELM from the server pod to hit the model endpoint on the model pod. 
 
+![](/assets/neurips-eval-app.png)
+
 We build both from a Dockerfile locally and push to the Coreweave Docker Registry. Our Kubernetes cluster then starts a deployment with two containers.  For this, we're creating a custom Helm chart.
 
 ## Building: 
