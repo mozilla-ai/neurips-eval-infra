@@ -1,4 +1,4 @@
-# Neurips Model Server and HELM Eval Server
+# NeurIPS Model Server and HELM Eval Server
 
 > [!NOTE]
 >
@@ -30,7 +30,7 @@ If you're building locally on MacOS with `arm`, make sure to specify the platfor
 
 2. Push to the registry 
 
-`docker push{docker-registry}/helm-server:1`
+`docker push {docker-registry}/helm-server:1`
 
 ### Model Image
 
@@ -50,9 +50,9 @@ Save all checkpoints and artifacts to shared storage.
 
 2. Test that the model container works by hitting the endpoints locally: `curl -X POST -H "Content-Type: application/json" -d '{"prompt": "The capital of france is "}' http://{model_container_ip}:8080/process`
 
-3. The two containers should see each other through the internal IP network on the Pod via port 8080. 
+3. The two containers should see each other through the internal IP network on the Pod via port `8080`. 
 
-4. To run the eval server, run the sample script from the eval server. Specify `nohup` or use `screen` or `tmux` if you'd like to run without interruptions. 
+4. To run HELM evaluation, run the sample script from the eval server. Specify `nohup` or use `screen` or `tmux` to run the long-running job without network interruptions. 
 
 `helm-run --conf-paths run_specs_full_coarse_600_budget.conf --suite v1 --max-eval-instances 1`
 
